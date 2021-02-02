@@ -1,13 +1,5 @@
 <?php
-	echo "<h1>hola</h1>";
-?>
-<DOCTYPE html>
-<html>
-<head>
-	<title>Disqui</title>
-	<meta chasert="utf-8">
-</head>
-<body>
-	<h1>Disqui</h1>
-</body>
-</html>
+	require_once 'app/libs/app.php';
+	require_once 'app/libs/vista.php';
+	require_once 'app/libs/controlador.php';
+	$app = new App();

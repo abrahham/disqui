@@ -27,3 +27,22 @@ a {
 	width: 90%;
 	margin: 0 auto;
 }
+/* inputs */
+input[type=text] {
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+/* botones */
+.btn {
+	cursor: pointer;
+	margin: 5px;
+	border: 0;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 1rem;
+}
+.b-prim {
+	background-color: var(--primario);
+}

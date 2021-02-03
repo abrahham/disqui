@@ -1,9 +1,9 @@
 <?php
-	class discosControlador extends Controlador {
+	class mainControlador extends Controlador {
 		public function __construct() {
 			parent::__construct();
 		}
 		function index() {
-			$this->vista->renderizar("discos");
+			$this->vista->renderizar("main");
 		}
 	}

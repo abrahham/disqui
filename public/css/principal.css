@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--primario: #5499C7;
+}
+header {
+	background-color: var(--primario);
+	color: white;
+	width: 100%;
+	font-size: 2rem;
+}
+nav {
+	padding: 10px;
+}
+li {
+	display: inline;
+	margin: 10px;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+.contenedor {
+	width: 90%;
+	margin: 0 auto;
+}

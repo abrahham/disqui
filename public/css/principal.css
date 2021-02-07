@@ -46,3 +46,16 @@ input[type=text] {
 .b-prim {
 	background-color: var(--primario);
 }
+
+#discos-desplegar {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+}
+.tarjeta {
+	display: flex;
+	flex-direction: column;
+}
+.tarjeta img {
+	width: 100%;
+}

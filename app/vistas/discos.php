@@ -2,11 +2,12 @@
 	<h1>discos</h1>
 	<div>		
 		<div>
-			<button class="btn b-prim" onclick="desplegarBusqueda('pop');">Pop</button>
-			<button class="btn b-prim" onclick="desplegarBusqueda('rock');">Rock</button>
-			<button class="btn b-prim" onclick="desplegarBusqueda('rap');">Rap</button>
+			<button class="btn b-prim" onclick="desplegarBusqueda({genero:'electronica'});">Electrónica</button>
+			<button class="btn b-prim" onclick="desplegarBusqueda({genero:'pop'});">Pop</button>
+			<button class="btn b-prim" onclick="desplegarBusqueda({genero:'rock'});">Rock</button>
+			<button class="btn b-prim" onclick="desplegarBusqueda({genero:'rap'});">Rap</button>
 		</div>
-		<input type="text" placeholder="Busca un artista en particular">
+		<input type="text" id="buscar-discos" placeholder="Busca un artista en particular">
 	</div>
 	<div id="discos-desplegar">
 

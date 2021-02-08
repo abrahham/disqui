@@ -1,6 +1,15 @@
-function desplegarBusqueda(valor) {
+$(document).ready(function() {
+	desplegarBusqueda({nombre:''});
+});
+$('#buscar-discos').keyup(function(){
+	desplegarBusqueda({nombre:$('#buscar-discos').val()});
+});
+function desplegarBusqueda(obj) {
+	var datos = {};
+	if(obj.genero != undefined) datos.genero = obj.genero;
+	if(obj.nombre != undefined) datos.nombre = obj.nombre;
 	$.ajax({
-		url:'ajaxDiscos/buscar',data:JSON.stringify({genero:valor}),
+		url:'ajaxDiscos/buscar',data:JSON.stringify(datos),
 		dataType:'json',method:"POST",
 		success:function(respuesta) {
 			var contenedor = $('#discos-desplegar');

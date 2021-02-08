@@ -12,7 +12,7 @@
 				<ul>
 					<li><a href="main">Disqui</a></li>
 					<li><a href="discos">Discos</a></li>
-					<li><a href="artistas">Artistas</a></li>
+					<li><a href="bandas">Bandas</a></li>
 				</ul>
 			</nav>
 		</div>

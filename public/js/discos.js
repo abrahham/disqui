@@ -17,7 +17,8 @@ function desplegarBusqueda(obj) {
 			$.each(respuesta, function() {				
 				contenedor.append(
 					`<div class='tarjeta'>` + 
-						`<div><img src='public/imgd/${this.id}.jpg'></div>` + 					
+						`<button class='btn-ver'><img src='public/img/mostrar.png'></button>` +
+						`<div><img src='public/imgd/${this.id}.jpg'></div>` + 				
 						`<div><p>${this.nombre}</p><p>${this.artista}</p></div>` +
 					`</div>`
 				);

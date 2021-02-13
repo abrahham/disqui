@@ -9,8 +9,11 @@
 		</div>
 		<input type="text" id="buscar-discos" placeholder="Busca un artista en particular">
 	</div>
-	<div id="discos-desplegar">
-
+	<div id="discos-datos">
+		<input name="nombre" type="text">
+		<input name="fecha" type="text">
+		<input name="genero" type="text"
 	</div>
+	<div id="discos-desplegar"></div>
 	<script src="public/js/discos.js"></script>
 </div>

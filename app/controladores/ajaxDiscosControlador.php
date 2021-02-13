@@ -12,4 +12,11 @@
 			header("Content-Type: application/json");
 			echo json_encode($datos);
 		}
+		function datos() {
+			$postData = json_decode(file_get_contents("php://input"), true);
+			$id = $postData['id'];
+			$datos = $this->modelo->datosPorID($id);
+			header("Content-Type: application/json");
+			echo json_encode($datos);
+		}
 	}

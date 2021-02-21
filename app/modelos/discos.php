@@ -11,7 +11,7 @@
 			$query->execute([":id" => $id]);
 			while($fila = $query->fetch()) {
 				return [
-					"id" => $fila['disco_id'], "nombre" => $fila['disco_nombre'], "fecha" => $fila['disco_fecha'],
+					"id" => $fila['disco_id'], "nombre" => $fila['disco_nombre'], "fecha" => date("d/m/Y", strtotime($fila['disco_fecha'])),
 					"genero" => $fila['disco_genero'],"artista" => $fila['banda']
 				];
 			}

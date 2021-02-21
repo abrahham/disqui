@@ -2,17 +2,29 @@
 	<h1>discos</h1>
 	<div>		
 		<div>
-			<button class="btn b-prim" onclick="desplegarBusqueda({genero:'electronica'});">Electrónica</button>
-			<button class="btn b-prim" onclick="desplegarBusqueda({genero:'pop'});">Pop</button>
-			<button class="btn b-prim" onclick="desplegarBusqueda({genero:'rock'});">Rock</button>
-			<button class="btn b-prim" onclick="desplegarBusqueda({genero:'rap'});">Rap</button>
+			<button class="btn b-sec" onclick="desplegarBusqueda({genero:'electronica'});">Electrónica</button>
+			<button class="btn b-sec" onclick="desplegarBusqueda({genero:'pop'});">Pop</button>
+			<button class="btn b-sec" onclick="desplegarBusqueda({genero:'rock'});">Rock</button>
+			<button class="btn b-sec" onclick="desplegarBusqueda({genero:'rap'});">Rap</button>
 		</div>
 		<input type="text" id="buscar-discos" placeholder="Busca un artista en particular">
 	</div>
-	<div id="discos-datos">
-		<input name="nombre" type="text">
-		<input name="fecha" type="text">
-		<input name="genero" type="text"
+	<div style="display:none;" id="discos-datos">
+		<button class="btn btn-cerrar" onclick="this.parentElement.style.display='none';">X</button>
+		<div>
+			<img style="height:100%;">		
+			<div id="discos-info">
+				<h3 id="d-nombre"></h3>
+				<label id="d-artista"></label>
+				<label id="d-fecha"></label>
+				<label id="d-genero"></label>
+				<ul>
+				  <li>Coffee</li>
+				  <li>Tea</li>
+				  <li>Milk</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<div id="discos-desplegar"></div>
 	<script src="public/js/discos.js"></script>

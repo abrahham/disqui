@@ -34,9 +34,12 @@ function desplegarDatos(id) {
 		dataType:'json',method:'POST',
 		success:function(respuesta) {
 			console.log(respuesta);
-			$("#discos-datos input[name='nombre']").val(respuesta.nombre);
-			$("#discos-datos input[name='fecha']").val(respuesta.fecha);
-			$("#discos-datos input[name='genero']").val(respuesta.genero);
+			$("#discos-datos").css("display", "block");
+			$("#discos-datos img").attr("src", `public/imgd/${id}.jpg`);
+			$("#discos-datos #d-artista").text(respuesta.artista);
+			$("#discos-datos #d-nombre").text(respuesta.nombre);
+			$("#discos-datos #d-fecha").text(respuesta.fecha);
+			$("#discos-datos #d-genero").text(respuesta.genero);			
 		}, error:function(respuesta) {
 			console.log(respuesta.responseText);
 		}

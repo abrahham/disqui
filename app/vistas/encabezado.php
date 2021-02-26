@@ -3,6 +3,7 @@
 	<meta charset="utf-8">
 	<title>Disqui, la mejor tienda de discos de américa latina</title>
 	<link rel=stylesheet type="text/css" href="public/css/principal.css">
+	<link rel=stylesheet type="text/css" href="public/css/discos.css">
 	<script src="public/js/jquery-1.12.0.min.js"></script>
 </head>
 <body>

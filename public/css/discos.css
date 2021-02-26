@@ -1,0 +1,69 @@
+
+#discos-datos {	
+	padding: 20px;
+	background-color: white;
+	position: fixed;
+	z-index: 11;
+	box-shadow: 0 2px 5px 0;
+	padding: 20px;
+	top: 5%;
+	left: 10%;
+	width: 80%;
+	height: 90%;
+}
+#discos-datos > div {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+#discos-info {
+	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+	min-width: 40%;
+}
+#d-nombre {
+	font-size: 2rem;
+}
+#d-artista {
+	font-size: 1.4rem;
+}
+#d-fecha {
+ 	font-size: 1.2rem;
+}
+#d-artista:hover {
+	color: var(--secundario);
+}
+#d-genero {
+	display: inline;
+	background-color: var(--secundario);
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+	width: max-content;
+}
+#discos-datos table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.contenedor-tabla {
+	max-height: 60vh;
+	overflow-x: auto;
+}
+#discos-datos tr {
+	font-size: 1.1rem;
+	padding: 3px;
+	background-color: var(--terciario);
+	color: white;
+	border-bottom: 2px solid white;
+}
+#discos-datos td {
+	padding: 5px;
+}
+.celda-titulo {
+	width:80%;
+}
+.celda-duracion {
+	width:auto;
+}

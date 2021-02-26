@@ -15,14 +15,15 @@
 			<img style="height:100%;">		
 			<div id="discos-info">
 				<h3 id="d-nombre"></h3>
-				<label id="d-artista"></label>
-				<label id="d-fecha"></label>
-				<label id="d-genero"></label>
-				<ul>
-				  <li>Coffee</li>
-				  <li>Tea</li>
-				  <li>Milk</li>
-				</ul>
+				<p id="d-fecha"></p>
+				<p id="d-artista"></p>
+				<p id="d-genero"></p>
+				<div style="margin-top:10px;">
+					<p>Listado de canciones</p>
+					<div class="contenedor-tabla">
+						<table></table>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

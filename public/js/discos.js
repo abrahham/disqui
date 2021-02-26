@@ -33,13 +33,21 @@ function desplegarDatos(id) {
 		url:'ajaxDiscos/datos',data:JSON.stringify({'id':id}),
 		dataType:'json',method:'POST',
 		success:function(respuesta) {
-			console.log(respuesta);
 			$("#discos-datos").css("display", "block");
 			$("#discos-datos img").attr("src", `public/imgd/${id}.jpg`);
 			$("#discos-datos #d-artista").text(respuesta.artista);
 			$("#discos-datos #d-nombre").text(respuesta.nombre);
 			$("#discos-datos #d-fecha").text(respuesta.fecha);
-			$("#discos-datos #d-genero").text(respuesta.genero);			
+			$("#discos-datos #d-genero").text(respuesta.genero);
+			$("#discos-info table").empty();
+			$.each(respuesta.canciones,function() {
+				$("#discos-info table").append(
+					`<tr>` +
+						`<td class="celda-titulo">${this.nombre}</td>` +
+						`<td class="celda-duracion">${this.duracion}</td>` +
+					`</tr>`
+				);
+			});		
 		}, error:function(respuesta) {
 			console.log(respuesta.responseText);
 		}

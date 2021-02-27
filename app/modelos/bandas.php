@@ -5,12 +5,12 @@
 		}
 		function obtenerDiscos($id) {
 			$con = $this->datai::conectar();
-			$sentencia = "SELECT disco_nombre, disco_genero FROM discos WHERE banda_id = :id";
+			$sentencia = "SELECT disco_id, disco_nombre FROM discos WHERE banda_id = :id";
 			$query = $con->prepare($sentencia);
 			$query->execute([":id" => $id]);
 			$items = [];
 			while($fila = $query->fetch()) {
-				array_push($items,["nombre" => $fila['disco_nombre']]);
+				array_push($items,["id" => $fila["disco_id"],"nombre" => $fila['disco_nombre']]);
 			}
 			return $items;		
 		}
@@ -22,7 +22,7 @@
 			$items = [];
 			while($fila = $query->fetch()) {
 				array_push($items,[
-					"nombre" => $fila['banda_nombre'], "discos" => $this->obtenerDiscos($fila['banda_id'])
+					"id" => $fila["banda_id"], "nombre" => $fila['banda_nombre']
 				]);
 			}
 			return $items;

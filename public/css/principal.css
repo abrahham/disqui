@@ -53,13 +53,6 @@ input[type=text] {
 .b-sec {
 	background-color: var(--secundario);
 }
-
-#discos-desplegar {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 20px;
-	margin-top: 10px;
-}
 .tarjeta {
 	display: flex;
 	flex-direction: column;

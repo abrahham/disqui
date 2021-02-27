@@ -1,5 +1,10 @@
-
-#discos-datos {	
+#discos-desplegar {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	margin-top: 10px;
+}
+#discos-datos, #bandas-datos {	
 	padding: 20px;
 	background-color: white;
 	position: fixed;
@@ -66,4 +71,12 @@
 }
 .celda-duracion {
 	width:auto;
+}
+
+/* cambiar a bandas */
+#bandas-desplegar {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	margin-top: 10px;
 }

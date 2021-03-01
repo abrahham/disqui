@@ -1,7 +1,13 @@
-function desplegarBusqueda() {
+$(document).ready(function() {
+	desplegarBusqueda('');
+});
+$('#buscar-discos').keyup(function(){
+	desplegarBusqueda($('#buscar-discos').val());
+});
+function desplegarBusqueda(valor) {
 	$.ajax({
 		url:'ajaxBandas/buscar',dataType:'json',
-		method:'POST',
+		method:'POST',data:JSON.stringify({nombre:valor}),
 		success:function(respuesta) {
 			$("#bandas-desplegar").empty();
 			$.each(respuesta, function(){
@@ -29,6 +35,7 @@ function desplegarDatos(id) {
 				$("#bandas-datos #contenedor-discos").append(
 					`<div>` +
 						`<img src='public/imgd/${this.id}.jpg'>` +
+						`<p>${this.nombre}</p>` +
 					`</div>`
 				);
 			});

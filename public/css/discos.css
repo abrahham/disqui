@@ -80,3 +80,18 @@
 	gap: 20px;
 	margin-top: 10px;
 }
+#contenedor-discos img {
+	width:100%	;
+}
+#contenedor-discos > div {
+	border: 1px solid black;
+	padding: 10px;
+}
+#contenedor-discos {
+	overflow-x: auto;
+	width: 100%;
+	height: auto;	
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+}

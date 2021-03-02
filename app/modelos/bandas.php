@@ -16,7 +16,7 @@
 		}
 		function buscar($valor) {
 			$con = $this->datai::conectar();
-			$sentencia = "SELECT banda_id, banda_nombre FROM bandas WHERE banda_nombre LIKE :valor";
+			$sentencia = "SELECT banda_id, banda_nombre FROM bandas WHERE banda_nombre LIKE :valor ORDER BY banda_nombre";
 			$query = $con->prepare($sentencia);
 			$query->execute([":valor" => "%{$valor}%"]);
 			$items = [];

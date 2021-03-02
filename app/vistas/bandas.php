@@ -7,5 +7,5 @@
 			<div id="contenedor-discos">
 			</div>
 	</div>
-	<script src="public/js/artistas.js"></script>
+	<script src="public/js/bandas.js"></script>
 </div>

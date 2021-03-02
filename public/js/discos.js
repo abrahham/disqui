@@ -18,7 +18,7 @@ function desplegarBusqueda(obj) {
 				contenedor.append(
 					`<div class='tarjeta'>` + 
 						`<button class='btn-ver' onclick='desplegarDatos(\"${this.id}\");'><img src='public/img/mostrar.png'></button>` +
-						`<div><img src='public/imgd/${this.id}.jpg'></div>` + 				
+						`<div><img src='public/imgd/discos/${this.id}.jpg'></div>` + 				
 						`<div><p>${this.nombre}</p><p>${this.artista}</p></div>` +
 					`</div>`
 				);

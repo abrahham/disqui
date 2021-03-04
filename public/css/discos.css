@@ -16,13 +16,6 @@
 	width: 80%;
 	height: 90%;
 }
-#discos-datos {
-	opacity: 0;
-	transition: opacity 1s;
-}
-#discos-datos.visib {
-	opacity: 1;
-}
 #discos-datos > div {
 	height: 100%;
 	width: 100%;

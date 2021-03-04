@@ -8,6 +8,19 @@
 	--secundario: #4681B3;
 	--terciario: #CF73C7;
 }
+@keyframes mostrar {
+ 	0% {
+ 		opacity: 0;
+ 	}
+ 	100% {
+ 		opacity: 1;
+ 	}
+}
+.visib {
+	animation: mostrar 1s;
+	
+	animation-fill-mode: forwards;
+}
 header, footer {
 	background-color: var(--primario);
 	color: white;

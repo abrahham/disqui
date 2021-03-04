@@ -30,6 +30,10 @@ function desplegarDatos(id) {
 		dataType:'json',method:'POST',
 		success:function(respuesta) {
 			$("#bandas-datos").css("display", "block");
+			$("#bandas-datos").addClass("visib");
+			$("#bandas-datos").on('animationend',function(){
+				$("#bandas-datos").removeClass("visib");
+			});
 			$("#bandas-datos #contenedor-discos").empty();
 			$.each(respuesta, function() {
 				$("#bandas-datos #contenedor-discos").append(

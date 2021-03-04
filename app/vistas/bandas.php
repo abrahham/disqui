@@ -1,4 +1,4 @@
-<div class="contenedor">
+<div class="contenedor land">
 	<p class="aparad">Las bandas del momento</p>
 	<input type="text" id="buscar-discos" placeholder="Busca un artista en particular">
 	<div id="bandas-desplegar"></div>

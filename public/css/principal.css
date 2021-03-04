@@ -8,6 +8,24 @@
 	--secundario: #4681B3;
 	--terciario: #CF73C7;
 }
+.contenedor {
+	width: 90%;
+	margin: 0 auto;	
+}
+/* animación aparecer nav desde lado */
+@keyframes lado {
+	0% { transform: translateX(-100%); }
+	100% { transform: translateX(0); }
+}
+/* animación aparacer div desde abajor */
+@keyframes bajar {
+	0% { transform: translateY(100%); }
+	100% { transform: translateY(0); }
+}
+.land {
+	animation: bajar 2s;	
+}
+/* animación fade in para modal */
 @keyframes mostrar {
  	0% {
  		opacity: 0;
@@ -17,10 +35,10 @@
  	}
 }
 .visib {
-	animation: mostrar 1s;
-	
+	animation: mostrar 1s;	
 	animation-fill-mode: forwards;
 }
+/* */
 header, footer {
 	background-color: var(--primario);
 	color: white;
@@ -36,6 +54,7 @@ footer {
 }
 nav {
 	padding: 10px;
+	animation: lado 1s ease;
 }
 li {
 	display: inline;
@@ -47,10 +66,6 @@ nav a:hover {
 a {
 	color: white;
 	text-decoration: none;
-}
-.contenedor {
-	width: 90%;
-	margin: 0 auto;
 }
 /* inputs */
 input[type=text] {

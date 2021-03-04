@@ -5,12 +5,15 @@
 		}
 		function obtenerDiscos($id) {
 			$con = $this->datai::conectar();
-			$sentencia = "SELECT disco_id, disco_nombre FROM discos WHERE banda_id = :id";
+			$sentencia = "SELECT disco_id, disco_nombre, YEAR(disco_fecha) AS anio FROM discos WHERE banda_id = :id";
 			$query = $con->prepare($sentencia);
 			$query->execute([":id" => $id]);
 			$items = [];
 			while($fila = $query->fetch()) {
-				array_push($items,["id" => $fila["disco_id"],"nombre" => $fila['disco_nombre']]);
+				array_push($items,[
+					"id" => $fila["disco_id"],"nombre" => $fila['disco_nombre'],
+					"anio" => $fila['anio']
+				]);
 			}
 			return $items;		
 		}

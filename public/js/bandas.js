@@ -35,7 +35,7 @@ function desplegarDatos(id) {
 				$("#bandas-datos #contenedor-discos").append(
 					`<div>` +
 						`<img src='public/imgd/discos/${this.id}.jpg'>` +
-						`<p>${this.nombre}</p>` +
+						`<p>${this.nombre}</p><p>${this.anio}</p>` +
 					`</div>`
 				);
 			});

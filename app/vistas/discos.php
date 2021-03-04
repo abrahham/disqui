@@ -1,16 +1,17 @@
 <div class="contenedor">
-	<h1>discos</h1>
+	<p class="aparad">Encuentra tus discos favoritos</p>
 	<div>		
 		<div>
 			<button class="btn b-sec" onclick="desplegarBusqueda({genero:'electronica'});">Electrónica</button>
+			<button class="btn b-sec" onclick="desplegarBusqueda({genero:'metal'});">Metal</button>
 			<button class="btn b-sec" onclick="desplegarBusqueda({genero:'pop'});">Pop</button>
 			<button class="btn b-sec" onclick="desplegarBusqueda({genero:'rock'});">Rock</button>
 			<button class="btn b-sec" onclick="desplegarBusqueda({genero:'rap'});">Rap</button>
 		</div>
 		<input type="text" id="buscar-discos" placeholder="Busca un artista en particular">
 	</div>
-	<div style="display:none;" id="discos-datos">
-		<button class="btn btn-cerrar" onclick="this.parentElement.style.display='none';">X</button>
+	<div style="visibility:hidden;" id="discos-datos">
+		<button class="btn btn-cerrar" onclick="remover(this)">X</button>
 		<div>
 			<img style="height:100%;">		
 			<div id="discos-info">

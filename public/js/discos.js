@@ -28,13 +28,18 @@ function desplegarBusqueda(obj) {
 		}
 	});
 }
+function remover(elem) {
+	$(elem).parent().css("visibility", "hidden");
+	$(elem).removeClass("visib");
+}
 function desplegarDatos(id) {
 	$.ajax({
 		url:'ajaxDiscos/datos',data:JSON.stringify({'id':id}),
 		dataType:'json',method:'POST',
 		success:function(respuesta) {
-			$("#discos-datos").css("display", "block");
-			$("#discos-datos img").attr("src", `public/imgd/${id}.jpg`);
+			$("#discos-datos").css("visibility", "visible");
+			$("#discos-datos").addClass("visib");
+			$("#discos-datos img").attr("src", `public/imgd/discos/${id}.jpg`);
 			$("#discos-datos #d-artista").text(respuesta.artista);
 			$("#discos-datos #d-nombre").text(respuesta.nombre);
 			$("#discos-datos #d-fecha").text(respuesta.fecha);

@@ -1,5 +1,5 @@
 <div class="contenedor">
-	<h1>bandas</h1>
+	<p class="aparad">Las bandas del momento</p>
 	<input type="text" id="buscar-discos" placeholder="Busca un artista en particular">
 	<div id="bandas-desplegar"></div>
 	<div style="display:none;" id="bandas-datos">
